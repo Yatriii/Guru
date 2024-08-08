@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>combinator</title>
     <style>
-        h1, p, .demo{
-            color: red;
-        }
-        /* types of combinator = ,
+      h1,
+      p,
+      .demo {
+        color: red;
+      }
+      /* types of combinator = ,
         1-grouping combinator = space
         2-descendent combinator
         3-child combinator
-        4-general combinator
-        5-adjacent sibling combinator */
-        .container div{
-            color: rgb(39, 39, 114);
-            
-        }
-        .parent> .child{color: red;}
+        4-general combinator   ~ tiled
+        5-adjacent sibling combinator   + */  
+      .container div {
+        color: rgb(39, 39, 114);
+      }
+      /* .parent> .child{color: red;} */
+      .grandchild ~ div {
+        background-color: red;
+      }
+      .grandchild + div{
+        background-color: rgb(56, 164, 164);
+      }
     </style>
-</head>
-<body>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus earum tempora modi, in cum autem labore blanditiis deleniti a fuga quasi veniam, iste beatae hic quia explicabo eligendi harum atque.</h1>
+  </head>
+  <body>
+    <h1>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus
+      earum tempora modi, in cum autem labore blanditiis deleniti a fuga quasi
+      veniam, iste beatae hic quia explicabo eligendi harum atque.
+    </h1>
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, magni commodi hic ab assumenda temporibus nemo, ullam sapiente earum ipsum debitis? Laborum similique aliquid nostrum quam suscipit dolores nisi. Ab?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, magni
+      commodi hic ab assumenda temporibus nemo, ullam sapiente earum ipsum
+      debitis? Laborum similique aliquid nostrum quam suscipit dolores nisi. Ab?
     </p>
-    <div class="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus, repellendus quam provident quo deserunt voluptatum cumque. Ad aspernatur autem, dolor, excepturi culpa, voluptatibus itaque officia maiores cumque consectetur ab!</div>
+    <div class="demo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+      necessitatibus, repellendus quam provident quo deserunt voluptatum cumque.
+      Ad aspernatur autem, dolor, excepturi culpa, voluptatibus itaque officia
+      maiores cumque consectetur ab!
+    </div>
 
     <div class="container">
-        <div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit praesentium odit, adipisci saepe veritatis laudantium eaque atque doloribus explicabo, sit facilis debitis dolor sapiente? Ipsa dolor ea unde voluptatibus odit.`
-        </div>
+      <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+        praesentium odit, adipisci saepe veritatis laudantium eaque atque
+        doloribus explicabo, sit facilis debitis dolor sapiente? Ipsa dolor ea
+        unde voluptatibus odit.`
+      </div>
     </div>
     <div class="parent">
-        <div class="child">child-1</div>
-        <div class="child">child-2</div>
-        <div class="child">child-3
-            <div class="grandchild">sdfgsdfg</div>
-            <div class="grandchild">fgsdfgfd</div>
-        <div class="grandchild">fjadj</div>
-        </div>
+      <div class="child">child-1</div>
+      <div class="child">child-2</div>
+      <div class="child">
+        child-3
+        <div class="grandchild">sdfgsdfg</div>
+        <div class="grandchild-1">fgsdfgfd</div>
+        <div class="grandchild-2">fgsdfgfd</div>
+        <div class="grandchild-2">fgsdfgfd</div>
+        <div class="grandchild-2">fgsdfgfd</div>
+        <div class="grandchild-3
+        ">fjadj</div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
