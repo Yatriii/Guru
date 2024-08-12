@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>class-work</title>
+    <script
+      src="https://kit.fontawesome.com/a90454bc49.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       * {
         margin: 0;
       }
+
       .header {
         display: flex;
         justify-content: center;
@@ -18,7 +23,7 @@
       .main {
         display: flex;
         /* justify-content: space-between; */
-        height: 200px;
+        height: 423px;
         background-color: blueviolet;
         align-items: center;
         width: 100%;
@@ -63,11 +68,11 @@
         background-color: aqua;
         height: 50px;
       }
-     
-      .header> ul {
+
+      .header > ul {
         justify-content: space-between;
         display: flex;
-        
+
         list-style: none;
         background-color: rgb(191, 26, 122);
         width: 100%;
@@ -83,46 +88,125 @@
         justify-content: center;
         position: relative;
       }
-      .category{
+      .category {
         display: none;
         position: absolute;
-        
-
       }
-      .page li:hover .category{
+      .page li:hover .category {
         display: block;
       }
-      .category li{
+      .category li {
         color: rgb(212, 7, 227);
         list-style: none;
         padding: 10px;
         background-color: yellow;
       }
-   .sub-category{
-    display: none;
-    padding: 0;
-   }
-   .category li{
-    position: relative;
-   }
-   .category li:hover .sub-category{
-    display: block;
-    position: absolute;
-    left: 100%;
-    top: 0;
-   }
-      
-
+      .sub-category {
+        display: none;
+        padding: 0;
+      }
+      .category li {
+        position: relative;
+      }
+      .category li:hover .sub-category {
+        display: block;
+        position: absolute;
+        left: 100%;
+        top: 0;
+      }
+      select {
+        display: none;
+      }
+      @media screen and (max-width: 600px) {
+        select {
+          display: block;
+          width: 100%;
+          height: 50px;
+          text-align: center;
+          background-color: rgb(44, 105, 85);
+        }
+        .header {
+          display: none;
+        }
+        .main {
+          flex-direction: column;
+          width: 100%;
+        }
+        .left {
+          width: 100%;
+          height: 200px;
+        }
+        .right {
+          width: 100%;
+          height: 200px;
+        }
+        .right-bottom {
+          flex-direction: column;
+        }
+        .right-bottom-left {
+          width: 100%;
+        }
+        .right-bottom-right {
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 600px) and (max-width: 900px) {
+        .main {
+          flex-direction: column;
+          width: 100%;
+          
+        }
+        .left {
+          width: 100%;
+          height: 200px;
+          background-color: rgb(52, 52, 122);
+        }
+        .right {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+        }
+        .right-top {
+          width: 25%;
+          height: 223px;
+          background-color: black;
+          color: brown;
+        }
+        .right-bottom{
+          flex-direction: column;
+          width: 100%;
+          background-color: rgb(44, 44, 164);
+          height: 223px;
+        }
+        .right-bottom-left {
+          height: 100px;
+          width: 100%;
+        }
+        .right-bottom-right {
+          width: 100%;
+          height: 123px;
+        }
+      }
     </style>
   </head>
   <body>
+    <i class="fa-solid fa-bars"></i>
+    <select name="" id="">
+      <option value="">Home</option>
+      <option>Mouse</option>
+      <option>Keyboard</option>
+      <option>Desktop</option>
+      <option>Monitor</option>
+    </select>
     <h1>Layout</h1>
-    <div class="header ">
+    <div class="header">
       <ul class="page">
         <li>home</li>
-        <li>Product
+        <li>
+          Product
           <ul class="category">
-            <li >computer
+            <li>
+              computer
               <ul class="sub-category">
                 <li>Mouse</li>
                 <li>Keyboard</li>
@@ -130,7 +214,8 @@
                 <li>Monitor</li>
               </ul>
             </li>
-            <li>mobile
+            <li>
+              mobile
               <ul class="sub-category">
                 <li>samsung</li>
                 <li>nokia</li>
@@ -138,9 +223,10 @@
                 <li>redmi</li>
               </ul>
             </li>
-            <li>others
-              <ul  class="sub-category">
-                <li>contact </li>
+            <li>
+              others
+              <ul class="sub-category">
+                <li>contact</li>
                 <li>log in</li>
                 <li>feedback</li>
               </ul>
