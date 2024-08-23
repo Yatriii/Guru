@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Object></Object></title>
+</head>
+<body>
+    <h1>object-js</h1>
+    <script>
+        // Object
+        /*
+        object is collection of key/value pair, name /value, property/value pair
+        */
+        // {}=> Block
+        var details={
+            name: {
+                firstname:'prabin',middlename:'kumar',lastname:"shrestha"
+            },
+            address:'sankhu',
+            contact:'9849447417',
+            // name:'omanirai'
+            // name address contact=> key/name/property
+            // prabin sankhu 9849447417=> value
+
+        }
+        // two way of accessing object values
+        // 1-dot notation method
+        console.log(details.name, details.address, details.contact)
+        // 2-bracket notation method
+        /*
+        dot notation mehtod
+        object_name.key
+        */
+         // 2-bracket notation method
+        //  object_name['key']
+        console.log(details['name'] ,details['address'])
+        console.log(details.name.firstname)
+        var n= details.name;
+        console.log(n.firstname)
+
+
+        details['address']='lalitpur,vedu'
+        details['status']='active'
+        console.log(details)
+
+
+    </script>
+</body>
+</html>
